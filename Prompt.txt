@@ -1,0 +1,50 @@
+24-12-25 Create J-Factor
+
+สร้างตารางการแสดงข้อมูลไปที่แต่ละ Option หัวข้อ "J-Factor" โดยมีหัวข้อย่อยและการคำนวณภายในตามนี้ 
+A.Evaluate cost of risk and specify RAM level ใช้ข้อมูล Risk level จากใน Risk assessment ใน project information มาแสดงเพื่อใช้ในการคำนวณ 
+
+B. Justify cost of risk by considering Likelihood and Exposure factors 
+1.Medium RAM’s Level (USD) ตามเงื่อนไขดังนี้: Severity 5=320000000, 4=160000000, 3=16000000, 2=1600000, 1=160000, 0=0
+2.Likelihood Factor ตามเงื่อนไขดังนี้: Likelihood A=0.01, B=0.10, C=0.30, D=0.70, E=1.00
+3.Exposure Factor บังคับให้เลือกดังนี้: Continuous, Daily, Weekly, Monthly, Yearly
+4.%Exposure Factor ใช้ข้อมูลจาก Exposure Factor ตามเงื่อนไขดังนี้: Continuous=1, Daily=0.8, Weekly=0.5, Monthly=0.3, Yearly=0.1
+5.Justify cost of risk (Baht) ใช้ค่าที่ได้จากการนำ Medium RAM’s Level (USD) * Likelihood Factor * %Exposure Factor
+
+C.Evaluate % of risk reduction from this investment ให้กรอกตัวเลขค่าเป็น % of risk reduction
+
+D.J-Factor แสดงค่าตามเงื่อนไขดังนี้: (Justify cost of risk * % of risk reduction) / Total Initial Investment ของ Option นั้น
+
+นำข้อมูลจากที่ได้ทั้งหมด ไปประกอบการตัดสินใจที่ Analysis Results เป็น "Invesment Decision (J-Factor)" ตามเงื่อนไขดังนี้:
+ถ้า Risk Level H: J-Factor>0.2 = Invest, J-Factor<0.2 = Not Invest
+ถ้า Risk Level M: J-Factor>0.5 = Invest, J-Factor<0.5 = Not Invest
+ถ้า Risk Level L: ทุกค่า J-Factor เป็น Not Invest
+ถ้า Risk Level L/N: ทุกค่า J-Factor เป็น Not Invest
+
+
+ประกาศ
+ใส่ข้อความประกาศด้านล่าง "Document Reference" 
+1. J-Factor criteria (Refer ADPE-QTD-01)
+2. LCC Work instrution (Refer ENRM-QWI-XX)
+3. ISO 55000:2024
+
+
+ใน Dark mode สีตัวอักษรใน dropdown ที่ให้เลือกทุกช่อง มองตัวหนังสือไม่ชัด แก้ไขให้เห็นชัดเจนและเป็นไปในแนวทางเดียวกับ Dark mode
+
+
+เพิ่ม Select Operation Category ให้กับ Add ในส่วนของ Operation แบบเดียวกับของ Maintenance โดยมีหัวข้อตามต่อไปนี้ Manhour cost, Spare parts consumption cost, logistic support cost, Energy consumption cost
+
+ทำให้ทุกส่วนใน Option ตั้งแต่ข้อ 1-7 มี Patten ที่เป็นรูปแบบเดียวกัน ให้สีมีความแต่งต่างกันไปได้ตามความเกี่ยวเนื่องของหัวข้อ แต่ยังคง Option การทำงานทั้งหมดไว้เช่นเดิม
+
+
+25/12/25
+แก้ไขกราฟ Total Cost (NPV) Comparison ให้มีการแสดง NPV Cost Breakdown ลงไปในกราฟแท่งแต่ละ Option ด้วย
+
+26/12/25
+Add option
+Done	- การเปลี่ยนสกุลเงิน THB to USD
+	- ให้มี default สร้าง option แรกเป็น สถานนะการณ์ปัจจุบัน
+	- แยก J-Factor ออกจาก LCC ให้เป็นเลือก Need, No Need
+
+
+InProgress	- เพิ่ม Factor ที่เกี่ยวกับ "Process validation"
+
